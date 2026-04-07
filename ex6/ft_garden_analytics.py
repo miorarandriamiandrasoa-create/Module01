@@ -3,18 +3,18 @@ class Plant:
         self._name=name.capitalize()
         self._height=height
         self._age=age
-
     def show(self):
         print(f"{self._name} : {self._height:.1f} cm, {self._age} days old")
-    
     def grow(self):
         if self._age<35:
             self._height+=0.3
         else:
             self._height+=0.8
-            
     def lifetime(self):
         self._age+=1
+    @staticmethod
+    def is_year(age) -> bool:
+        return age>=365
 class Flower(Plant):
     def __init__(self, name: str, height: int, age: int, color: str):
         super().__init__(name, height, age)
@@ -26,6 +26,7 @@ class Flower(Plant):
         print(" Rose has not bloomed yet")
     def bloom(self):
         super().show()
+        print(f"{self._name} : {self._height:.1f} cm, {lf._age} days old")
         print(f" Color: {self._color}")
         print(" Rose is blooming beautifully!\n")
 
@@ -54,18 +55,12 @@ class Vegetable(Plant):
         super().lifetime()
         self._nutritional_value+=1
 if __name__ == "__main__":
-    print("===Garden Plant Types===")
-    plant1 = Flower("rose",25, 30,"red")
-    plant1.show()
-    plant1.bloom()
+    print("===Garden statistics===")
     plant2 = Tree("Oak",200,365,5)
+    print(f"Is 20 days more than a year? -> {Plant.is_year(20)}")
+    print(f"Is 366 days more than a year? -> {Plant.is_year(366)}")
     plant2.show()
     plant2.produce_shade()
-    plant3 = Vegetable("tomato",5,10,"april",0)
-    plant3.show()
-    for i in range(0, 20):
-        plant3.grow()
-        plant3.lifetime()
-    plant3.show()
+ 
     
     
