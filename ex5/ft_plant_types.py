@@ -1,7 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_plant_types.py                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/08 13:59:24 by miorrand          #+#    #+#              #
+#    Updated: 2026/04/09 14:29:28 by miorrand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self._name = name.capitalize()
-        self._height = round(height, 1)
+        self._height = height
         self._age = age
 
     def set_height(self, height: int) -> None:
@@ -12,17 +25,17 @@ class Plant:
             self._height = height
             print(f"Height updated:{self._height}cm\n")
 
-    def set_age(self, age:int) -> None:
+    def set_age(self, age: int) -> None:
         if (age < 0):
             print(f"{self._name} :Error, age can't be negative\nAge update rejected")
         else:
             self._age = age
             print(f"Age updated:{self._age}days\n")
 
-    def get_height(self) ->int:
+    def get_height(self) -> float:
         return self._height
 
-    def get_age(self) ->int:
+    def get_age(self) -> int:
         return self._age
 
     def show(self) -> None:

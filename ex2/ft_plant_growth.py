@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_plant_growth.py                                 :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/08 13:58:39 by miorrand          #+#    #+#              #
+#    Updated: 2026/04/09 14:09:39 by miorrand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name.capitalize()
@@ -9,9 +21,9 @@ class Plant:
 
     def grow(self) -> None:
         if self.age < 35:
-            self.height += 0.3
-        else:
             self.height += 0.8
+        else:
+            self.height += 0.3
 
     def lifetime(self) -> None:
         self.age += 1

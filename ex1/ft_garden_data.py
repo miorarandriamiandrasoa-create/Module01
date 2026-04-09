@@ -1,3 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_garden_data.py                                  :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/08 13:58:20 by miorrand          #+#    #+#              #
+#    Updated: 2026/04/08 13:58:25 by miorrand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
 class Plant:
     def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name.capitalize()

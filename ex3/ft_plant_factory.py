@@ -1,3 +1,16 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    ft_plant_factory.py                                :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/04/08 13:59:10 by miorrand          #+#    #+#              #
+#    Updated: 2026/04/08 13:59:11 by miorrand         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
 class Plant:
     def __init__(self, name: str, height: float, age: int) -> None:
         self.name = name.capitalize()
