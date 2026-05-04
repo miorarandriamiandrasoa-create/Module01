@@ -1,14 +1,15 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_garden_analytics.py                             :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/08 13:59:32 by miorrand          #+#    #+#              #
-#    Updated: 2026/04/09 14:27:21 by miorrand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   ft_garden_analytics.py                               :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: miorrand <miorrand@student.42antananarivo.   +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/04/22 11:03:54 by miorrand            #+#    #+#            #
+#   Updated: 2026/04/22 11:03:55 by miorrand           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
 
 
 class Plant:
@@ -65,21 +66,22 @@ class Plant:
             return True
 
     @classmethod
-    def anonymous(cls):
+    def anonymous(cls) -> "Plant":
         print("\n=== Anonymous")
         return cls("Unknnown plant", 00.0, 0)
 
     def set_height(self, height: int) -> None:
         if (height < 0):
-            print(
-                f"{self._name} :Error, height can't be negative\nHeight update rejected")
+            print(f"{self._name} :Error, height can't be negative\n")
+            print("Height update rejected")
         else:
             self._height = height
             print(f"Height updated:{self._height}cm\n")
 
     def set_age(self, age: int) -> None:
         if (age < 0):
-            print(f"{self._name} :Error, age can't be negative\nAge update rejected")
+            print(f"{self._name} :Error, age can't be negative\n")
+            print("Age update rejected")
         else:
             self._age = age
             print(f"Age updated:{self._age}days\n")
@@ -107,7 +109,8 @@ class Plant:
 
 
 class Flower(Plant):
-    def __init__(self, name: str, height: float, age: int, color: str, header: bool = True) -> None:
+    def __init__(self, name: str, height: float,
+                 age: int, color: str, header: bool = True) -> None:
         super().__init__(name, height, age)
         self._color = color
         self._blooming = False

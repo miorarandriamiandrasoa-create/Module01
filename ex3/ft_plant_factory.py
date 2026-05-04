@@ -1,14 +1,15 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_plant_factory.py                                :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: miorrand <miorrand@student.42antananari    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/04/08 13:59:10 by miorrand          #+#    #+#              #
-#    Updated: 2026/04/08 13:59:11 by miorrand         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+#!/usr/bin/env python3
+# ########################################################################### #
+#   shebang: 1                                                                #
+#                                                          :::      ::::::::  #
+#   ft_plant_factory.py                                  :+:      :+:    :+:  #
+#                                                      +:+ +:+         +:+    #
+#   By: miorrand <miorrand@student.42antananarivo.   +#+  +:+       +#+       #
+#                                                  +#+#+#+#+#+   +#+          #
+#   Created: 2026/04/22 11:03:22 by miorrand            #+#    #+#            #
+#   Updated: 2026/04/22 11:03:24 by miorrand           ###   ########.fr      #
+#                                                                             #
+# ########################################################################### #
 
 
 class Plant:
@@ -16,8 +17,8 @@ class Plant:
         self.name = name.capitalize()
         self.height = height
         self.age = age
-        print(
-            f"Created:{self.name} : {round(self.height, 1)} cm, {self.age} days old")
+        print(f"Created:{self.name} : {round(self.height, 1)} cm,")
+        print(f" {self.age} days old")
 
 
 if __name__ == "__main__":
